@@ -84,6 +84,21 @@ public class CM1_24 {
         input.close();
     }
 
+    //Method untuk validasi input agar nilai >= 0 && <= 100
+    public static double inputNilai(Scanner input, String pesan) {
+        double nilai;
+        while (true) {
+            System.out.print(pesan);
+            nilai = input.nextDouble();
+            if (nilai >= 0 && nilai <= 100) {
+                break;
+            } else {
+                System.out.println("Nilai tidak valid! Masukkan nilai antara 0 - 100.");
+            }
+        }
+        return nilai;
+    } 
+
     //Method untuk konversi nilai ke huruf
     public static String konversiNilaiHuruf(double nilai) {
         if (nilai >= 85) return "A";

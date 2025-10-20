@@ -8,23 +8,23 @@ public class CM1_24 {
         System.out.println("==== INPUT DATA MAHASISWA ====");
         System.out.print("Nama : ");
         String nama = input.nextLine();
-        System.out.print("NIM : ");
+        System.out.print("NIM  : ");
         String nim = input.nextLine();
 
         //Input Nilai Mata Kuliah 1 : Algoritma dan Pemrograman
         System.out.println("\n ---- MATA KULIAH 1 : Algoritma dan Pemograman ----");
-        System.out.print("Nilai UTS : ");
+        System.out.print("Nilai UTS   : ");
         double utsAlgo = input.nextDouble();
-        System.out.print("Nilai UAS : ");
+        System.out.print("Nilai UAS   : ");
         double uasAlgo = input.nextDouble();
         System.out.print("Nilai Tugas : ");
         double tugasAlgo = input.nextDouble();
 
         //Input Nilai Mata Kuliah 2 : Struktur Data
         System.out.println("\n ---- MATA KULIAH 2 : STRUKTUR DATA");
-        System.out.print("Nilai UTS : ");
+        System.out.print("Nilai UTS   : ");
         double utsSD = input.nextDouble();
-        System.out.print("Nilai UAS : ");
+        System.out.print("Nilai UAS   : ");
         double uasSD = input.nextDouble();
         System.out.print("Nilai Tugas : ");
         double tugasSD = input.nextDouble();
@@ -70,7 +70,7 @@ public class CM1_24 {
         //Output Hasil Penilaian
         System.out.println("\n========== HASIL PENILAIAN AKADEMIK ==========");
         System.out.println("Nama : " + nama);
-        System.out.println("NIM : " + nim);
+        System.out.println("NIM  : " + nim);
         System.out.println();
         System.out.println("Mata Kuliah\t\t\tUTS\tUAS\tTugas\tNilai Akhir\tNiai Huruf\tStatus");
         System.out.println("-------------------------------------------------------------------");

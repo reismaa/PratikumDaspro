@@ -13,21 +13,57 @@ public class CM1_24 {
 
         //Input Nilai Mata Kuliah 1 : Algoritma dan Pemrograman
         System.out.println("\n ---- MATA KULIAH 1 : Algoritma dan Pemograman ----");
-        System.out.print("Nilai UTS   : ");
-        double utsAlgo = input.nextDouble();
-        System.out.print("Nilai UAS   : ");
-        double uasAlgo = input.nextDouble();
-        System.out.print("Nilai Tugas : ");
-        double tugasAlgo = input.nextDouble();
+        double utsAlgo, uasAlgo, tugasAlgo;
+        do {
+            System.out.print("Nilai UTS   : ");
+            utsAlgo = input.nextDouble();
+            if (utsAlgo >= 0 ||  utsAlgo <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100!");
+            }
+        } while (utsAlgo >= 0 || utsAlgo <= 100);
+
+        do {
+            System.out.print("Nilai UAS   : ");
+            uasAlgo = input.nextDouble();
+            if (uasAlgo >= 0 || uasAlgo <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100!");
+            }
+        } while (uasAlgo >= 0 || uasAlgo <= 100);
+
+        do {
+            System.out.print("Nilai Tugas : ");
+            tugasAlgo = input.nextDouble();
+            if (tugasAlgo >= 0 || tugasAlgo <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100!");
+            }
+        } while (tugasAlgo >= 0 || tugasAlgo <= 100);
 
         //Input Nilai Mata Kuliah 2 : Struktur Data
         System.out.println("\n ---- MATA KULIAH 2 : STRUKTUR DATA");
-        System.out.print("Nilai UTS   : ");
-        double utsSD = input.nextDouble();
-        System.out.print("Nilai UAS   : ");
-        double uasSD = input.nextDouble();
-        System.out.print("Nilai Tugas : ");
-        double tugasSD = input.nextDouble();
+        double utsSD, uasSD = 0, tugasSD;
+        do {
+            System.out.print("Nilai UTS   : ");
+            utsSD = input.nextDouble();
+            if (utsSD >= 0 || utsSD <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100");
+            }
+        } while (utsSD >= 0 || utsSD <= 100);
+
+        do {
+            System.out.print("Nilai UAS   : ");
+            uasAlgo = input.nextDouble();
+            if (uasSD >= 0 || uasSD <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100!");
+            }
+        } while (uasSD >= 0 || uasSD <= 100);
+
+        do { 
+            System.out.print("Nilai Tugas : ");
+            tugasSD = input.nextDouble();
+            if (tugasSD >= 0 || tugasSD <= 100) {
+                System.out.println("Nilai harus antara 0 dan 100");
+            }
+        } while (tugasSD >= 0 || tugasSD <= 100);
 
         //Proses Perhitungan Nilai
         //Menghitung nilai akhir setiap mata kuliah dengan bobot : UTS 30%, UAS 40%, Tugas 30%
@@ -84,21 +120,6 @@ public class CM1_24 {
         input.close();
     }
 
-    //Method untuk validasi input agar nilai >= 0 && <= 100
-    public static double inputNilai(Scanner input, String pesan) {
-        double nilai;
-        while (true) {
-            System.out.print(pesan);
-            nilai = input.nextDouble();
-            if (nilai >= 0 && nilai <= 100) {
-                break;
-            } else {
-                System.out.println("Nilai tidak valid! Masukkan nilai antara 0 - 100.");
-            }
-        }
-        return nilai;
-    } 
-
     //Method untuk konversi nilai ke huruf
     public static String konversiNilaiHuruf(double nilai) {
         if (nilai >= 85) return "A";
@@ -111,4 +132,4 @@ public class CM1_24 {
         else return "E";
             
         }
-    }
+}

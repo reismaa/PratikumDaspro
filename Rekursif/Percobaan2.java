@@ -12,6 +12,14 @@ public class Percobaan2 {
         }
     }
 
+    // fungsi untuk mencetak deret perhitungannya
+    static void cetakDeret(int x, int y) {
+        for (int i = 0; i < y; i++) {
+            System.out.print(x + "x");
+        } 
+        System.out.print("1 = ");
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -21,6 +29,9 @@ public class Percobaan2 {
         bilangan = sc.nextInt();
         System.out.print("Pangkat: ");
         pangkat = sc.nextInt();
+
+        // cetak deret perhitungan
+        cetakDeret(bilangan, pangkat);
 
         System.out.println(hitungPangkat(bilangan, pangkat));
 

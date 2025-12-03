@@ -29,7 +29,6 @@ public class Tugas {
 
         int[] angka = new int[n];
 
-
         for (int i = n; i >= 1; i--) {
             System.out.print("Masukkan angka ke-" + i + ": ");
             angka[i - 1] = sc.nextInt();
@@ -40,6 +39,7 @@ public class Tugas {
         int hasilIteratif = totalIteratif(angka);
 
         System.out.println("Total dari " + n + " angka yang dimasukkan adalah: " + hasilIteratif);
+        System.out.println("Total : " + hasilRekursif);
     
         sc.close();
     }

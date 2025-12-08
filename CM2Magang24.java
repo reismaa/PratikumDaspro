@@ -114,7 +114,7 @@ public class CM2Magang24 {
         }
     }
 
-    // 3. Cari Berdasarkan Program Studi (Tampilan Tabel)
+    // 3. Cari Berdasarkan Program Studi
     static void cariProdi() {
         if (total == 0) {
             System.out.println("Belum ada pendaftar.");

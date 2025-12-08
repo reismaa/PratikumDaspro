@@ -114,34 +114,34 @@ public class CM2Magang24 {
         }
     }
 
-// 3. Cari Berdasarkan Program Studi (Tampilan Tabel)
-static void cariProdi() {
-    if (total == 0) {
-        System.out.println("Belum ada pendaftar.");
-        return;
-    }
+    // 3. Cari Berdasarkan Program Studi (Tampilan Tabel)
+    static void cariProdi() {
+        if (total == 0) {
+            System.out.println("Belum ada pendaftar.");
+            return;
+        }
 
-    System.out.print("Masukkan Program Studi: ");
-    String cari = input.nextLine();
+        System.out.print("Masukkan Program Studi: ");
+        String cari = input.nextLine();
 
-    boolean found = false;
+        boolean found = false;
 
-    System.out.println("----------------------------------------------------------");
-    System.out.println("No | Nama\tNIM\t\tProdi\t\tPerusahaan\tSemester\tStatus");
-    System.out.println("----------------------------------------------------------");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("No | Nama\tNIM\t\tProdi\t\tPerusahaan\tSemester\tStatus");
+        System.out.println("----------------------------------------------------------");
 
-    for (int i = 0; i < total; i++) {
-        if (prodi[i].equalsIgnoreCase(cari)) {
-            found = true;
-            System.out.printf("%d  | %s\t%s\t%s\t%s\t%d\t\t%s\n",
-                i + 1, nama[i], nim[i], prodi[i], perusahaan[i], semester[i], status[i]);
+        for (int i = 0; i < total; i++) {
+            if (prodi[i].equalsIgnoreCase(cari)) {
+                found = true;
+                System.out.printf("%d  | %s\t%s\t%s\t%s\t%d\t\t%s\n",
+                    i + 1, nama[i], nim[i], prodi[i], perusahaan[i], semester[i], status[i]);
+            }
+        }
+
+        if (!found) {
+            System.out.println("Tidak ada data dengan program studi tersebut.");
         }
     }
-
-    if (!found) {
-        System.out.println("Tidak ada data dengan program studi tersebut.");
-    }
-}
 
 
     // 4. Hitung Jumlah Status
